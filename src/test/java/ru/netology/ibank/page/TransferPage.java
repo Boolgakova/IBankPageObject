@@ -1,5 +1,6 @@
 package ru.netology.ibank.page;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.ibank.data.DataHelper;
 
@@ -19,7 +20,7 @@ public class TransferPage {
         return new DashboardPage();
     }
 
-    public SelenideElement getError() {
-        return error;
+    public void getError() {
+        error.shouldBe(Condition.visible);
     }
 }

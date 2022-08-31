@@ -32,13 +32,16 @@ public class DataHelper {
     @Value
     public static class CardInfo {
         private String number;
+    }
 
-        public static CardInfo getCardOne() {
-            return new CardInfo("5559000000000001");
+    public static CardInfo getCard(String id) {
+        CardInfo cardInfo = new CardInfo(null);
+        if (id.equals("1")) {
+            return cardInfo = new CardInfo("5559000000000001");
         }
-
-        public static CardInfo getCardTwo() {
-            return new CardInfo("5559000000000002");
+        if (id.equals("2")) {
+            return cardInfo = new CardInfo("5559000000000002");
         }
+        return cardInfo;
     }
 }
